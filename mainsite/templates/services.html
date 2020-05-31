@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Business Oriented - Services</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /> <!-- https://fonts.google.com/ -->    
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" /> <!-- https://getbootstrap.com/ -->
+    <link href="{% static 'fontawesome/css/all.min.css' %}" rel="stylesheet" /> <!-- https://fontawesome.com/ -->
+    <link href="{% static 'css/templatemo-business-oriented.css' %}" rel="stylesheet" />
+</head>
+<!--
+
+TemplateMo 549 Business Oriented
+
+https://templatemo.com/tm-549-business-oriented
+
+-->
+<body>
+    <div id="parallax-1" class="parallax-window" data-parallax="scroll" data-image-src="{% static 'img/biz-oriented-header.jpg' %}">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="tm-logo">
+                        <i class="fas fa-industry fa-5x mr-5"></i>
+                        <span class="text-uppercase tm-logo-text">QUARANTINE CENTER</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tm-nav-container-outer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">                    
+                    <nav class="navbar navbar-expand-lg" id="tm-main-nav">
+                        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
+                            data-target="#navbar-nav" aria-controls="navbar-nav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="dark-blue-text"><i class="fas fa-bars"></i></span>
+                        </button>                    
+                        <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link tm-nav-link" href="#">Services <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="contact.html">More</a>
+                                </li>
+                            </ul>                        
+                        </div>                        
+                    </nav>                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-7">
+        <div class="row mb-6">
+            <div class="col-lg-7 mb-lg-0 mb-5 pr-lg-5">
+                <section class="mb-10">
+                    <div>
+                        <h3 class="tm-title-gray mb-4">使用說明</h3>
+                        <hr class="mb-5 tm-hr">
+                        <p class="mb-5">當使用者按下以下的“Start Checking...”按鈕，會有語音導覽詢問使用者體溫，當紅燈亮起(維持3秒)，請如實回答“XX點X度” ; 接著會依序詢問八項症狀，當紅燈亮起(維持3秒)，請使用者評估後(1-5分)，如實回答“X分”。若使用者給出了數據不合理，例如：100度，2.5分或7分，會重複該問答。當問答結束後，請對著鏡頭(勿戴口罩)進行拍攝，以便醫生與社工去做辨識是否為同一人檢測。
+                        </p>
+                        <p class="mb-5">給分評估標準如下：1分為毫無症狀 ; 2分為輕微 ; 3分為適中 ; 4分為稍嚴重 ; 5分為須立即送醫。</p>
+                    </div>
+                </section>
+                <section>
+                    <h3 class="tm-title-gray mb-4">開始測量</h3>
+                    <hr class="mb-5 tm-hr">
+<!--                     <a href="contact.html" class="btn btn-primary">Start Checking...</a> -->
+                    <button class="btn btn-primary" onclick="checkStarter()">Start Checking...</button>
+                </section>
+            </div>
+            <div class="col-lg-5">
+                <img src="{% static 'img/services-1.jpg' %}" alt="Image" class="img-fluid">
+                <div class="tm-bg-gray-dark tm-box-2">
+                    <h4 class="tm-text-primary tm-h3 mb-4"><a href="https://taiwancanhelp.us/" target="_blank">Taiwan can help and is helping......</a></h4>
+                    <p class="mb-5"><a href="https://edition.cnn.com/2020/04/04/asia/taiwan-coronavirus-response-who-intl-hnk/index.html" target="_blank">Taiwan's coronavirus response is among the best globally</a></p>
+                    <p class="mb-5"><a href="https://abcnews.go.com/Health/taiwan-donate-10-million-masks-countries-hit-hardest/story?id=69918187v" target="_blank">Taiwan to donate 10 million masks to countries hit hardest by coronavirus</a></p>
+                    <p class="mb-5"><a href="https://focustaiwan.tw/politics/202004020004" target="_blank">Europe, U.S. leaders thank Taiwan for mask donation pledge</a></p>
+                    <p class><a href="https://www.taiwannews.com.tw/en/news/3907731" target="_blank">US secretary of state supports role for Taiwan at WHA</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="parallax-3" class="parallax-window parallax-window-2" data-parallax="scroll"
+        data-image-src="{% static 'img/biz-oriented-footer-2.jpg' %}">
+    </div>
+
+
+
+    <footer class="container-fluid">
+            <div class="row">
+                <p class="col-lg-9 col-md-8 mb-5 mb-md-0">
+                    
+                </p>
+                <div class="col-lg-3 col-md-4 text-right">
+                    <a rel="nofollow" target="_blank" href="https://www.facebook.com/mohw.gov.tw" class="tm-social-link">
+                        <i class="fab fa-facebook fa-2x tm-social-icon"></i>
+                    </a>
+                    <a href="https://twitter.com/MOHW_Taiwan" class="tm-social-link">
+                        <i class="fab fa-twitter fa-2x tm-social-icon"></i>
+                    </a>
+                    <a href="https://page.line.me/mohw" class="tm-social-link">
+                        <i class="fab fa-line fa-2x tm-social-icon"></i>
+                    </a>
+                    <a href="https://www.youtube.com/c/%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E8%A1%9B%E7%94%9F%E7%A6%8F%E5%88%A9%E9%83%A8" class="tm-social-link">
+                        <i class="fab fa-youtube fa-2x tm-social-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/parallax.min.js' %}"></script> <!-- https://pixelcog.github.io/parallax.js/ -->
+    <script src="{% static 'js/tooplate-script.js' %}"></script>
+    <script>        
+        function checkStarter(){
+            $.ajax({
+                type: "GET",
+                url: "/check_start",
+                data: {},
+                crossDomain: true,
+                success: callbackFunc
+            });
+        }
+
+        function callbackFunc(response){
+            console.log(response)
+        }
+    </script>
+</body>
+</html>
