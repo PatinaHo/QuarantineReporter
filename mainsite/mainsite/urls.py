@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from reporter.views import services, check_start
+from reporter.views import index, services, contact, check_start
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('index/', index),
     path('service/', services),
+    path('contact/', contact),
     path('check_start', check_start)
 ]

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,9 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Business Oriented CSS Template</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /> <!-- https://fonts.google.com/ -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" /> <!-- https://getbootstrap.com/ -->
-    <link href="fontawesome/css/all.min.css" rel="stylesheet" /> <!-- https://fontawesome.com/ -->
-    <link href="css/templatemo-business-oriented.css" rel="stylesheet" />
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" /> <!-- https://getbootstrap.com/ -->
+    <link href="{% static 'fontawesome/css/all.min.css' %}" rel="stylesheet" /> <!-- https://fontawesome.com/ -->
+    <link href="{% static 'css/templatemo-business-oriented.css' %}" rel="stylesheet" />
 </head>
 <!--
 
@@ -19,7 +20,7 @@ https://templatemo.com/tm-549-business-oriented
 
 -->
 <body>
-    <div id="parallax-1" class="parallax-window" data-parallax="scroll" data-image-src="img/biz-oriented-header.jpg">
+    <div id="parallax-1" class="parallax-window" data-parallax="scroll" data-image-src="{% static 'img/biz-oriented-header.jpg'%}">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
@@ -46,10 +47,10 @@ https://templatemo.com/tm-549-business-oriented
                                     <a class="nav-link tm-nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link tm-nav-link" href="services.html">Services</a>
+                                    <a class="nav-link tm-nav-link" href="/service">Services</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link tm-nav-link" href="contact.html">More</a>
+                                    <a class="nav-link tm-nav-link" href="/contact">More</a>
                                 </li>
                             </ul>                            
                         </div>                        
@@ -67,28 +68,28 @@ https://templatemo.com/tm-549-business-oriented
                     <hr class="mb-5 tm-hr">
                     <p class="mb-5">Covid-19大流行之際，為了配合<a href="https://www.mohw.gov.tw/mp-1.html" target="_blank">衛生福利部</a>的防疫政策，居家隔離或居家檢疫者需在家待滿14天以確保身體狀況無虞，但可能會與醫療機構有狀況脫鉤之情況，甚至有無症狀患者。</p>
                     <p class="mb-5">為了全面了解居家隔離或居家檢疫者的情況，本網站設計了一系列的<a href="services.html" target="_blank">簡要問答</a>來和使用者互動，追蹤使用者狀況，再由醫生或社工來決議是否要將使用者送至檢疫中心，進行更全面的照護。</p>
-                    <img src="img/biz-oriented-1.jpg" alt="Company Background Image" class="img-fluid tm-mb-3">
+                    <img src="{% static 'img/biz-oriented-1.jpg' %}" alt="Company Background Image" class="img-fluid tm-mb-3">
                 </div>
             </section>
             <section class="col-lg-6">
                 <h3 class="tm-title-gray mb-4">步驟流程</h3>
                 <hr class="mb-5 tm-hr">
                 <div class="tm-strategy-box mb-5">
-                    <img src="img/strategy-1.jpg" alt="Image" class="img-fluid tm-strategy-img">
+                    <img src="{% static 'img/strategy-1.jpg'%}" alt="Image" class="img-fluid tm-strategy-img">
                     <div>
                         <h4 class="tm-text-primary">資訊收集</h4>
                         <p class="tm-strategy-text">使用者透過內建之語音辨識和文字語音系統，來和使用者進行互動，直到收集足夠的正確資訊。</p>
                     </div>
                 </div>
                 <div class="tm-strategy-box mb-5">
-                    <img src="img/strategy-2.jpg" alt="Image" class="img-fluid tm-strategy-img">
+                    <img src="{% static 'img/strategy-2.jpg' %}" alt="Image" class="img-fluid tm-strategy-img">
                     <div>
                         <h4 class="tm-text-primary">狀況診斷</h4>
                         <p class="tm-strategy-text">資訊傳送至雲端資料庫，由醫生或社工進行診斷。</p>
                     </div>
                 </div>
                 <div class="tm-strategy-box mb-5">
-                    <img src="img/strategy-3.jpg" alt="Image" class="img-fluid tm-strategy-img">
+                    <img src="{% static 'img/strategy-3.jpg' %}" alt="Image" class="img-fluid tm-strategy-img">
                     <div>
                         <h4 class="tm-text-primary">消息通知</h4>
                         <p class="tm-strategy-text">無論使用者的身體狀況健康與否，皆會收到來自本系統的診斷結果通知。</p>
@@ -100,7 +101,7 @@ https://templatemo.com/tm-549-business-oriented
     </div>
 
     <div id="parallax-2" class="parallax-window parallax-window-2" data-parallax="scroll"
-        data-image-src="img/biz-oriented-footer.jpg">
+        data-image-src="{% static 'img/biz-oriented-footer.jpg' %}">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
@@ -135,10 +136,10 @@ https://templatemo.com/tm-549-business-oriented
         </div>
     </footer>
 
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/parallax.min.js"></script> <!-- https://pixelcog.github.io/parallax.js/ -->
-    <script src="js/tooplate-script.js"></script>
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/parallax.min.js' %}"></script> <!-- https://pixelcog.github.io/parallax.js/ -->
+    <script src="{% static 'js/tooplate-script.js' %}"></script>
     <script>
         $(document).ready(function () {
             $('#parallax-1').parallax({ imageSrc: 'img/biz-oriented-header.jpg' });
