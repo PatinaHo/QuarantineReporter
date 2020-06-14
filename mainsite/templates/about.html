@@ -69,7 +69,7 @@ https://templatemo.com/tm-549-business-oriented
                     <p class="mb-4">系統會將使用者的紀錄做圖表呈現，按下以下“ Sign in ”按鈕，系統會對使用者做人臉拍攝，做使用者與資料歸屬者進行核對。若核對成功，再按下以下“ Track... ”，會開放使用者紀錄呈現。</p>
                     
                     <p class="mb-4"></p>
-                    <button type="button" class="btn btn-primary" onclick="final()">Track...</button>
+                    <button type="button" class="btn btn-primary" onclick="track()">Track...</button>
                 </div>
             </section>
             <div class="col-lg-4 col-md-6 mb-8 tm-px-3">
@@ -130,10 +130,10 @@ https://templatemo.com/tm-549-business-oriented
     <script src="{% static 'js/parallax.min.js' %}"></script> <!-- https://pixelcog.github.io/parallax.js/ -->
     <script src="{% static 'js/tooplate-script.js' %}"></script>
     <script>
-        function log(){
+        function track(){
             $.ajax({
                 type: "GET",
-                url: "/log_start",
+                url: "/track_start",
                 data: {},
                 crossDomain: true,
                 success: callbackFunc

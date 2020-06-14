@@ -77,7 +77,7 @@ https://templatemo.com/tm-549-business-oriented
                     <hr class="mb-5 tm-hr">
 <!--                     <a href="contact.html" class="btn btn-primary">Start Checking...</a> -->
                     <button type="button" class="btn btn-primary" onclick="register()">Register...</button>
-                    <button type="button" class="btn btn-primary" onclick="check()">Log...</button>
+                    <button type="button" class="btn btn-primary" onclick="log()">Log...</button>
                 </section>
             </div>
             <div class="col-lg-5">
@@ -125,10 +125,10 @@ https://templatemo.com/tm-549-business-oriented
     <script src="{% static 'js/parallax.min.js' %}"></script> <!-- https://pixelcog.github.io/parallax.js/ -->
     <script src="{% static 'js/tooplate-script.js' %}"></script>
     <script>        
-        function track(){
+        function log(){
             $.ajax({
                 type: "GET",
-                url: "/track_start",
+                url: "/log_start",
                 data: {},
                 crossDomain: true,
                 success: callbackFunc

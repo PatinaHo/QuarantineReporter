@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from reporter.views import index, services, contact, about, check_start
+from reporter.views import index, services, contact, about, register_start, log_start, track_start
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,5 +24,7 @@ urlpatterns = [
     path('service/', services),
     path('contact/', contact),
     path('about/', about),
-    path('check_start', check_start)
+    path('register_start/', register_start),
+    path('log_start/', log_start),
+    path('track_start/', track_start)
 ]
