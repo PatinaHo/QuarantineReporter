@@ -1,7 +1,9 @@
 from datetime import datetime
 from django.shortcuts import render
 
-from .raspberryPi import raspberryPi_starts
+from .register import register
+from .log import log
+from .track import track
 
 
 def index(request):
@@ -25,5 +27,13 @@ def about(request):
         'Items': [{'mood': '5', 'diastolicBP': '120', 'Time': '2020-06-11_15-08-32', 'systolicBP': '80', 'Name': '何沛臻'}, {'mood': '3', 'diastolicBP': '130', 'Time': '2020-06-12_15-08-32', 'systolicBP': '90', 'Name': '何沛臻'}]
     })
 
-def check_start(request):
-    raspberryPi_starts()
+
+
+def track_start(request):
+    track()
+
+def register_start(request):
+    register()
+
+def log_start(request):
+    log()

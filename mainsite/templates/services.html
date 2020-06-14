@@ -24,10 +24,6 @@ https://templatemo.com/tm-549-business-oriented
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <div class="tm-logo">
-                        <i class="fas fa-industry fa-5x mr-5"></i>
-                        <span class="text-uppercase tm-logo-text">QUARANTINE CENTER</span>
-                    </div>
                 </div>
             </div>
         </div>
@@ -49,6 +45,9 @@ https://templatemo.com/tm-549-business-oriented
                                 </li>
                                 <li class="nav-item active">
                                     <a class="nav-link tm-nav-link" href="#">Services <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                        <a class="nav-link tm-nav-link" href="/about">Track <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link tm-nav-link" href="contact">More</a>
@@ -77,7 +76,8 @@ https://templatemo.com/tm-549-business-oriented
                     <h3 class="tm-title-gray mb-4">開始測量</h3>
                     <hr class="mb-5 tm-hr">
 <!--                     <a href="contact.html" class="btn btn-primary">Start Checking...</a> -->
-                    <button class="btn btn-primary" onclick="checkStarter()">Start Checking...</button>
+                    <button type="button" class="btn btn-primary" onclick="register()">Register...</button>
+                    <button type="button" class="btn btn-primary" onclick="check()">Log...</button>
                 </section>
             </div>
             <div class="col-lg-5">
@@ -125,10 +125,20 @@ https://templatemo.com/tm-549-business-oriented
     <script src="{% static 'js/parallax.min.js' %}"></script> <!-- https://pixelcog.github.io/parallax.js/ -->
     <script src="{% static 'js/tooplate-script.js' %}"></script>
     <script>        
-        function checkStarter(){
+        function track(){
             $.ajax({
                 type: "GET",
-                url: "/check_start",
+                url: "/track_start",
+                data: {},
+                crossDomain: true,
+                success: callbackFunc
+            });
+        }
+
+        function register(){
+            $.ajax({
+                type: "GET",
+                url: "/register_start",
                 data: {},
                 crossDomain: true,
                 success: callbackFunc
