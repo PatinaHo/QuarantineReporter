@@ -19,5 +19,11 @@ def contact(request):
         'current_time': str(datetime.now()),
     })
 
+def about(request):
+    return render(request, 'about.html', {
+        'current_time': str(datetime.now()),
+        'Items': [{'mood': '5', 'diastolicBP': '120', 'Time': '2020-06-11_15-08-32', 'systolicBP': '80', 'Name': '何沛臻'}, {'mood': '3', 'diastolicBP': '130', 'Time': '2020-06-12_15-08-32', 'systolicBP': '90', 'Name': '何沛臻'}]
+    })
+
 def check_start(request):
     raspberryPi_starts()
